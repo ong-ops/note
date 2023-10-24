@@ -1,5 +1,7 @@
 # Note
+
 ### THM Room
+
   - https://tryhackme.com/room/bashscripting
   - Regex - https://tryhackme.com/room/catregex
   - https://tryhackme.com/room/adventofcyber2  
@@ -14,8 +16,10 @@
     - Intro - https://tryhackme.com/room/malmalintroductory
     - Research - https://tryhackme.com/room/malresearching
     - Strings - https://tryhackme.com/room/malstrings
+  - https://tryhackme.com/room/googledorking
 
 ### Reading List
+
   - Windows - User Account Control - https://learn.microsoft.com/en-us/windows/security/application-security/application-control/user-account-control/
   - Windows - Windows Defender Firewall - https://learn.microsoft.com/en-us/windows/security/operating-system-security/network-security/windows-firewall/best-practices-configuring
   - Windows - BitLocker - https://learn.microsoft.com/en-us/windows/security/operating-system-security/data-protection/bitlocker/
