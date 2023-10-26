@@ -25,3 +25,4 @@
   - Frame
 - Physical
   - Convert binary to signal
+  - Bit
