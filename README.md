@@ -1,2 +1,2 @@
-# learning-note
-Learning note
+# Note
+Note everything that I have learnt.
