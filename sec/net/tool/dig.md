@@ -7,11 +7,11 @@
 
 ## Syntax
 
-`dig <domain> @<dns-server-ip>`
+- `dig <domain> @<dns-server-ip>`
 
 ## Example
 
-`dig google.com @1.1.1.1`
+- `dig google.com @1.1.1.1`
 
 ```
 ; <<>> DiG 9.10.6 <<>> google.com @1.1.1.1

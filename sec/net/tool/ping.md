@@ -9,11 +9,11 @@
 
 ## Syntax
 
-`ping <target>`
+- `ping <target>`
 
 ## Example
 
-`ping google.com`
+- `ping google.com`
 
 ```
 PING google.com (172.217.166.142): 56 data bytes
@@ -32,5 +32,5 @@ round-trip min/avg/max/stddev = 26.417/32.739/39.708/5.637 ms
 
 ## Options
 
-`-i` wait: Wait seconds between sending each packet  
-`-v`: Verbose output
+- `-i wait` Wait seconds between sending each packet
+- `-v` Verbose output

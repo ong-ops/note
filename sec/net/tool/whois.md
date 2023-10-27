@@ -7,11 +7,11 @@
 
 ## Syntax
 
-`whois <domain>`
+- `whois <domain>`
 
 ## Example
 
-`whois facebook.com`
+- `whois facebook.com`
 
 ## Options
 

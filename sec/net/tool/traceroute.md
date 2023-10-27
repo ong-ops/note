@@ -7,12 +7,12 @@
 
 ## Syntax
 
-`traceroute <destination>`  
-Windows traceroute: `tracert`
+- `traceroute <destination>`  
+- Windows traceroute: `tracert`
 
 ## Example
 
-`traceroute tryhackme.com`
+- `traceroute tryhackme.com`
 
 ```
 traceroute: Warning: tryhackme.com has multiple addresses; using 172.67.27.10
@@ -32,5 +32,5 @@ traceroute to tryhackme.com (172.67.27.10), 64 hops max, 52 byte packets
 
 ## Options
 
-`-i` iface: Specify a network interface to obtain the source IP for outgoing probe packets  
-`-T`: Use `TCP` SYN for probes
+- `-i iface` Specify a network interface to obtain the source IP for outgoing probe packets
+- `-T` Use `TCP` SYN for probes
