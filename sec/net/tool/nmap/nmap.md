@@ -4,6 +4,17 @@
 
 ### Scanning - Type 
 
+- `-sn`
+  - ICMP Network scanning
+  - Find IP addresses contain active hosts
+  - Perform `ping sweep` (send ICMP to each possible IP)
+  - Can specified a hypen`-` or CIDR notation
+    - `nmap -sn 192.168.0.1-254` or `nmap -sn 192.168.0.0/24`
+  - Not to scan any ports
+    - Rely on ICMP echo packets
+      - Send TCP SYN to port 443
+      - Send TCP ACK or TCP SYN if not run as root packet to port 80
+    - Or ARP requests on a local network if run with sudo or root user)
 - `-sT` TCP scan
   - **Default scan without sudo permission**
   - Use full three-way handshake with the target
