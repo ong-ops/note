@@ -2,7 +2,7 @@
 
 ## Options
 
-### Scanning  
+### Scanning - Type 
 
 - `-sT` TCP scan
   - **Default scan without sudo permission**
@@ -17,7 +17,7 @@
       - Packet is dropped by firewall or spoofed with a TCP reset
 - `-sS` Syn Half-open/Stealth scan
   - **Default scan for sudo permission**
-  - Send back RST after receiving a SYN/ACK (Prevent the server from repeatedly trying to make request)
+  - Client send back RST after receiving a SYN/ACK (Prevent the server from repeatedly trying to make request)
     - |----- SYN ----->|
     - |<-- SYN/ACK --|
     - |----- RST ----->|
@@ -39,8 +39,23 @@
   - Good practice to run with `--top-ports <number>`
     - `nmap -sU --top-ports 20 <target>`
 - `-sN` Null scan
+  - TCP port
+  - TCP request sent with **no flag** set (Empty packet)
+  - Expect **RST** if the port is closed
 - `-sF` FIN scan
+  - TCP port
+  - TCP request sent with **FIN flag**
+  - Expect **RST** if the port is closed
 - `-sX` Xmas scan
+  - TCP port
+  - TCP request sent with **malform packet** (flag sets as PSH, URG, FIN)
+  - Expect **RST** if the port is closed
+  - If the port is firewalled then result will be `open|filtered`, `closed` or `filtered`
+  - If a port is `filtered` with one of these scans because the target responds with an ICMP unreachable packet
+- Scan Null, FIN, Xmas
+  - it is not always when hosts respond to malformed packet with RST for closed port and don't respond at all for open ports
+    - Windows and a lot of Cisco network devices respond with a RST to any malformed TCP packet regardless the port is open or not
+  - The goal is firewall evasion to drop the SYN flag (not 100% for modern systems)
 
 ### Scanning - Port
 
