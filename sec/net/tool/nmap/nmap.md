@@ -1,7 +1,5 @@
 # nmap
 
-## Options
-
 ### Scanning - Type 
 
 - `-sn`
@@ -79,13 +77,13 @@
   - `-sC` == `--script=default`
   - `--script=vuln`
 
+### Scanning - Service/Version
+
+- `-sV` Scan service/version info on open ports
+
 ### Detect - OS
 
 - `-O` Check OS
-
-### Detect - Service/Version
-
-- `-sV` Check service/version info on open ports
 
 ### Timing and Performance
 
