@@ -10,10 +10,11 @@
     - |----- SYN ----->|
     - |<-- SYN/ACK --|
     - |----- ACK ----->|
-  - In case result is `CLOSED` means the server responds reset(RST)
-  - In case result is `Filtered`
-    - Packet is dropped by firewall
-    - Packet is spoofed with a TCP reset
+  - Result status
+    - `closed`
+      - the server responds reset(RST)
+    - `filtered`
+      - Packet is dropped by firewall or spoofed with a TCP reset
 - `-sS` Syn Half-open/Stealth scan
   - **Default scan for sudo permission**
   - Send back RST after receiving a SYN/ACK (Prevent the server from repeatedly trying to make request)
@@ -28,6 +29,15 @@
     - Required sudo permission to root user because require to create a raw packet
     - Unstable services are sometimes down
 - `-sU` UDP scan
+  - Result status
+    - `open|filtered`
+      - It suspects the port is open or firewalled
+      - Very unusual to gets a UDP response (More commonly no response)
+    - `closed`
+      - the target should response with an ICMP (ping) packet with message port is unreachable
+  - Slow > TCP scan
+  - Good practice to run with `--top-ports <number>`
+    - `nmap -sU --top-ports 20 <target>`
 - `-sN` Null scan
 - `-sF` FIN scan
 - `-sX` Xmas scan
