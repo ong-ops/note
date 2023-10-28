@@ -4,8 +4,29 @@
 
 ### Scanning  
 
-- `-sS` Syn Half-open scan
 - `-sT` TCP scan
+  - **Default scan without sudo permission**
+  - Use full three-way handshake with the target
+    - |----- SYN ----->|
+    - |<-- SYN/ACK --|
+    - |----- ACK ----->|
+  - In case result is `CLOSED` means the server responds reset(RST)
+  - In case result is `Filtered`
+    - Packet is dropped by firewall
+    - Packet is spoofed with a TCP reset
+- `-sS` Syn Half-open/Stealth scan
+  - **Default scan for sudo permission**
+  - Send back RST after receiving a SYN/ACK (Prevent the server from repeatedly trying to make request)
+    - |----- SYN ----->|
+    - |<-- SYN/ACK --|
+    - |----- RST ----->|
+  - Pros
+    - Can bypass old IDS (look full three-way handshake)
+    - Often not logged by app on open ports because the connection is not fully established
+    - Faster than TCP scan
+  - Cons
+    - Required sudo permission to root user because require to create a raw packet
+    - Unstable services are sometimes down
 - `-sU` UDP scan
 - `-sN` Null scan
 - `-sF` FIN scan
@@ -28,7 +49,7 @@
 
 ### Detect - Service/Version
 
-- `sV` Check service/version info on open ports
+- `-sV` Check service/version info on open ports
 
 ### Timing and Performance
 
