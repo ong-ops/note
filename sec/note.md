@@ -17,6 +17,7 @@
     - Research - https://tryhackme.com/room/malresearching
     - Strings - https://tryhackme.com/room/malstrings
   - https://tryhackme.com/room/googledorking
+  - https://tryhackme.com/room/wireshark
 
 ### Reading List
 

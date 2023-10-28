@@ -1,5 +1,16 @@
 # nmap
 
+## Trick
+
+- Already directly on the local network, can use ARP requests to determine host activity
+
+## Options
+
+### Scanning - Host
+
+- `-Pn`
+  - Treat all hosts as online (Skip host discovery)
+
 ### Scanning - Type 
 
 - `-sn`
@@ -88,6 +99,18 @@
 ### Timing and Performance
 
 - `-T<0-5>` Set timing template (higher is faster)
+
+### Firewall/IDS Evasion and spoofing
+
+- https://nmap.org/book/man-bypass-firewalls-ids.html
+- Windows host's default firewall blocks all ICMP packets
+  - nmap will register this host as dead and not scan it -> use `-Pn` to scan all port
+- `-f` Flagment packet (split smaller pieces) less packets detected
+- `--mtu <number>` control packet size. This must be a multiple of 8
+- `--scan-delay <time>ms` useful if network is unstable but evading any time-based firewall/IDS trigger
+- `--badsum` generate invalid checksum for packet
+  - TCP/IP would drop packet
+  - But firewall may auto responds without check the checksum
 
 ### Output
 
