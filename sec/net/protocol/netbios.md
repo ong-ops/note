@@ -81,4 +81,23 @@
 - Less configure than TCP/IP
 - NetBIOS/NetBEUI services must be implemented atop other protocols (IPX, TCP/IP)
 
+---
+
+# Internetwork Packet Exchange/Sequenced Packet Exchange (IPX/SPX)
+
+- Networking protocol initially on networks using the Novell NetWare OS
+- Widely used on networks deploying MS Windows LANS
+- Designed for LANs
+- IPX is a network layer
+  - Similar to IP
+- SPX is a transport layer
+  - Provides Connection-Oriented services between 2 nodes on the network
+  - Used by client-server app
+  - Used `NAKs` for confirm acknowledgement like TCP `ACK`
+
+---
+
+# NetBIOS over TCP/IP (NBT, NetBT)
+
+- Networking protocol allows legacy computer app on the NetBIOS API to used on modern TCP/IP
 
