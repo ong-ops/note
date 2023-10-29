@@ -28,4 +28,5 @@
   - Windows - Antimalware Scan Interface - https://learn.microsoft.com/en-us/windows/win32/amsi/antimalware-scan-interface-portal
   - Windows - Configure Credential Guard - https://learn.microsoft.com/en-us/windows/security/identity-protection/credential-guard/configure?tabs=intune
   - Windows - Win10 Security Feature - https://www.csoonline.com/article/564531/the-best-new-windows-10-security-features.html
+  - Windows - How to detech, enable, disable SMB - https://learn.microsoft.com/en-US/windows-server/storage/file-server/troubleshoot/detect-enable-and-disable-smbv1-v2-v3?tabs=server
 
