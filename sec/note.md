@@ -18,6 +18,7 @@
     - Strings - https://tryhackme.com/room/malstrings
   - https://tryhackme.com/room/googledorking
   - https://tryhackme.com/room/wireshark
+  - https://tryhackme.com/room/wifihacking101
 
 ### Reading List
 

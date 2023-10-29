@@ -27,9 +27,12 @@
 - `-sT` TCP scan
   - **Default scan without sudo permission**
   - Use full three-way handshake with the target
-    - |----- SYN ----->|
-    - |<-- SYN/ACK --|
-    - |----- ACK ----->|
+```
+Client          Server
+  |----- SYN ----->|
+  |<-- SYN/ACK ----|
+  |----- ACK ----->|
+```
   - Result status
     - `closed`
       - the server responds reset(RST)
@@ -38,9 +41,12 @@
 - `-sS` Syn Half-open/Stealth scan
   - **Default scan for sudo permission**
   - Client send back RST after receiving a SYN/ACK (Prevent the server from repeatedly trying to make request)
-    - |----- SYN ----->|
-    - |<-- SYN/ACK --|
-    - |----- RST ----->|
+```
+Client          Server
+  |----- SYN ----->|
+  |<-- SYN/ACK ----|
+  |----- RST ----->|
+```
   - Pros
     - Can bypass old IDS (look full three-way handshake)
     - Often not logged by app on open ports because the connection is not fully established
