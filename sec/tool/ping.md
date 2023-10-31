@@ -34,3 +34,4 @@ round-trip min/avg/max/stddev = 26.417/32.739/39.708/5.637 ms
 
 - `-i wait` Wait seconds between sending each packet
 - `-v` Verbose output
+- `-c` count

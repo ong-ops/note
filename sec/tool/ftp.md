@@ -1,0 +1,5 @@
+# ftp
+
+## Syntax
+
+- `ftp [IP]`
