@@ -6,7 +6,7 @@
 
 ## Syntax
 
-`enum4linux [options] ip`
+- `enum4linux [options] ip`
 
 ## Options
 
