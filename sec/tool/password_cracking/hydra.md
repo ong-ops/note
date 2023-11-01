@@ -3,6 +3,7 @@
 - A very fast online password cracking
 - Perform rapid dictionary attacks against more than 50 protocols (Telnet, RDP, SSH, FTP, HTTP, HTTPS, SMB, Databases, more...)
 - https://github.com/vanhauser-thc/thc-hydra
+- https://www.kali.org/tools/hydra/
 
 ## Syntax
 
