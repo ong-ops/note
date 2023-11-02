@@ -16,9 +16,11 @@
     - Intro - https://tryhackme.com/room/malmalintroductory
     - Research - https://tryhackme.com/room/malresearching
     - Strings - https://tryhackme.com/room/malstrings
-  - https://tryhackme.com/room/googledorking
-  - https://tryhackme.com/room/wireshark
-  - https://tryhackme.com/room/wifihacking101
+  - Recon
+    - https://tryhackme.com/room/googledorking
+  - Network
+    - https://tryhackme.com/room/wireshark
+    - https://tryhackme.com/room/wifihacking101
 
 ### Reading List
 
@@ -29,4 +31,3 @@
   - Windows - Configure Credential Guard - https://learn.microsoft.com/en-us/windows/security/identity-protection/credential-guard/configure?tabs=intune
   - Windows - Win10 Security Feature - https://www.csoonline.com/article/564531/the-best-new-windows-10-security-features.html
   - Windows - How to detech, enable, disable SMB - https://learn.microsoft.com/en-US/windows-server/storage/file-server/troubleshoot/detect-enable-and-disable-smbv1-v2-v3?tabs=server
-

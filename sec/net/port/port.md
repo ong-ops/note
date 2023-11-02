@@ -14,3 +14,4 @@
 | 161    | SNMP                | UDP                |
 | 443    | HTTPS               | TCP, UDP           |
 | 445    | SMB                 | TCP                |
+| 2049   | NFS                 | TCP, UDP           |
