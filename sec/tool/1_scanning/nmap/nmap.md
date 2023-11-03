@@ -1,5 +1,9 @@
 # nmap
 
+## Syntax
+
+- `nmap -A -p- {IP}`
+
 ## Trick
 
 - Already directly on the local network, can use ARP requests to determine host activity
