@@ -5,6 +5,7 @@
 | 20     | FTP command/control | TCP                |
 | 21     | FTP data            | TCP                |
 | 23     | Telnet              | TCP, UDP           |
+| 25     | SMTP                | TCP                |
 | 80     | HTTP                | TCP, UDP           |
 | 111    | SUNRPC, RPCBIND     |                    |
 | 135    | DCOM-SCM            |                    |

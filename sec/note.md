@@ -18,6 +18,8 @@
     - Strings - https://tryhackme.com/room/malstrings
   - Recon
     - https://tryhackme.com/room/googledorking
+  - Exploitation
+    - https://tryhackme.com/module/metasploit
   - Network
     - https://tryhackme.com/room/wireshark
     - https://tryhackme.com/room/wifihacking101
