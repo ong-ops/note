@@ -1,8 +1,10 @@
 # nmap
 
-## Syntax
+## Command
 
-- `nmap -A -p- {IP}`
+```
+nmap <options> <ip>
+```
 
 ## Trick
 

@@ -1,18 +1,14 @@
 # Dig
 
-## Description
-
 - Manually query recursive DNS servers
 - TTL (second)
 
-## Syntax
+## Command
 
-- `dig <domain> @<dns-server-ip>`
-
-## Example
-
-- `dig google.com @1.1.1.1`
-
+```
+dig <domain> @<dns-server-ip>
+```
+Output
 ```
 ; <<>> DiG 9.10.6 <<>> google.com @1.1.1.1
 ;; global options: +cmd
@@ -33,6 +29,3 @@ google.com.             147     IN      A       142.251.43.110
 ;; WHEN: Fri Oct 27 01:49:34 +07 2023
 ;; MSG SIZE  rcvd: 55
 ```
-
-## Options
-

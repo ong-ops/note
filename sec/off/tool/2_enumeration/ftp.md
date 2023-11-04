@@ -1,5 +1,0 @@
-# ftp
-
-## Syntax
-
-- `ftp [IP]`

@@ -1,15 +1,14 @@
-# SMB - Server Message Block Protocol
+# SMB (Port 445)
 
+- **Server Message Block Protocol** is a client-server communication protocol used for sharing access to files, printers, serial ports and other resources on a network
+- Using TCP port 445
 ```
 Client                       Server  
 |-------- SMB Requests ------->|  
 |<------ SMB Responses --------|
 ```
-- Port 445
-- A client-server communication protocol used for sharing access to files, printers, serial ports and other resources on a network
-- Response - Request protocol transmit multiple messages between the client and server to establish a connection
+- Request-Response protocol transmit multiple messages between the client and server to establish a connection
 - Client using NBT, IPX/SPX, NBF
-- TCP port 445, NetBT port 137 138 139
 - Use `Kerberos` protocol to authen users against `Active Directory` on Windows domain networks
 - Opportunistic locking (OpLocks)
   - Improve file performance
@@ -31,7 +30,26 @@ Client                       Server
       - A break request may be sent from server to client.
       - Informs the client that OpLock is not longer valid
 
-## Tools
+## Command
 
-- smbclient
-- enum4linux
+Enumerate a SMB service on a server
+```
+enum4linux <options> <ip>
+```
+- `-U` Get user list
+- `-M` Get machine list
+- `-N` Get name list dump (Different from -U and -M)
+- `-S` Get share list
+- `-P` Get password policy info
+- `-G` Get group and member list
+- `-a` All of the above (Full basic enumeration)
+- https://github.com/CiscoCXSecurity/enum4linux
+
+---
+
+Connect to a SMB shared folder
+```
+smbclient //<ip>/<share>
+```
+- `-U <name>` Specific the user
+- `-p <port>` Specific the port

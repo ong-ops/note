@@ -1,7 +1,5 @@
 # Nmap Scripting Engine (NSE)
 
-## Description
-
 - Extending nmap functionality
 - Written in the **Lua**
 - Used for many things (e.g. scan vuln, auto exploit, recon)
@@ -23,20 +21,31 @@
 - `/usr/share/nmap/scripts` Find scripts that are stored in Linux
 - `/usr/share/nmap/scripts/script.db` Search installed scripts
 
-### NSE scripts - Installing
+## Command
 
-- `sudo apt update && sudo apt install nmap`
-- `sudo wget -0 /usr/share/nmap/scripts/<script-name>.nse https://svn.nmap.org/nmap/scripts/<script-name>.nse` manually downloading the script from nmap
-- `nmap --script-updatedb` update script.db to contain newly script
+Install an nmap script
+```
+Step 1: Update apt and install nmap
+sudo apt update && sudo apt install nmap
 
-## Syntax
+Step 2: Manually download the scritp from nmap
+sudo wget -0 /usr/share/nmap/scripts/<script_name>.nse https://svn.nmap.org/nmap/scripts/<script_name>.nse
 
-- `--script=<script-name>`
-- `--script-args <script-name>.<argument>` add arguments
-- `--script-help <script-name>` help
+Step 3: Update the script.db to contain newly script
+nmap --script-updatedb
+```
 
-## Example
+Nmap script document
+```
+nmap --script-help <script_name>
+```
 
-- `--script=http-fileupload-exploiter` Specific script 
-- `--script=smb-enum-users,smb-enum-shares` Multiple scripts 
-- `nmap -p 80 --script http-put --script-args http-put.url='/dav/shell.php',http-put.file='./shell.php'`
+Specific scripts
+```
+nmap --script=<script_name_1>[,<script_name_2>]
+```
+
+Add script arguments
+```
+nmap -p 80 --script <script_name> --script-args <script_name>.<arg1>='<value>'[,<script_name>.<arg2>='<value>']```
+

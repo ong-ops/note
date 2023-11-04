@@ -1,19 +1,18 @@
 # Traceroute
 
-## Description
-
 - See every intermediate step between your computer and the resource that you requested
 - ICMP protocol
-
-## Syntax
-
-- `traceroute <destination>`  
 - Windows traceroute: `tracert`
 
-## Example
+## Command
 
-- `traceroute tryhackme.com`
+```
+traceroute tryhackme.com
+```
+- `-i iface` Specify a network interface to obtain the source IP for outgoing probe packets
+- `-T` Use `TCP` SYN for probes
 
+Output
 ```
 traceroute: Warning: tryhackme.com has multiple addresses; using 172.67.27.10
 traceroute to tryhackme.com (172.67.27.10), 64 hops max, 52 byte packets
@@ -29,8 +28,3 @@ traceroute to tryhackme.com (172.67.27.10), 64 hops max, 52 byte packets
  8  37.85.50.182.static-corp.jastel.co.th.85.50.182.in-addr.arpa (182.50.85.37)  11.402 ms  20.636 ms  15.576 ms
  9  172.67.27.10 (172.67.27.10)  64.839 ms  5.716 ms  6.592 ms
 ```
-
-## Options
-
-- `-i iface` Specify a network interface to obtain the source IP for outgoing probe packets
-- `-T` Use `TCP` SYN for probes

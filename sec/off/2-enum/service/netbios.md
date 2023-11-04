@@ -1,15 +1,15 @@
-# NetBIOS - Network Basic Input/Output System
+# NetBIOS (Port 137, 138, 139)
 
-- Port 137, 138, 139
+- Network Basic Input/Output System
 - Provide services related to the session layer of the OSI model
 - Communicate over LAN
 - https://en.wikipedia.org/wiki/NetBIOS
 
 ## Service
 
-- Name service (NetBIOS-NS)
-  - Register app using NetBIOS name
-  - In NBT use UDP port **137** (TCP is rarely)
+- NetBIOS-NS 
+  - **NetBIOS Name Service** is used to register an application using NetBIOS name
+  - Using UDP port **137** (TCP is rarely)
   - IPv6 are not supported
   - 16 octets (15 char + 1 char as a Suffix)
     - Suffix describes the service or name record type (host, master browser, domain controller, other services)
@@ -18,19 +18,17 @@
     - `Add group name` Registers a NetBIOS group name
     - `Delete name` Un-register a NetBIOS name or group name
     - `Find name` Looks up a NetBIOS name on the network
-- Datagram distribution service (NetBIOS-DGM)
-  - Connectionless
-  - App is responsible for error detection and recovery
-  - In NBT use UDP port **138**
+- NetBIOS-DGM
+  - **NetBIOS Datagram distribution service** is a connectionless and application responsible for error detection and recovery
+  - Using UDP port **138**
   - Function:
     - `Send Datagram` Send a datagram to a remote NetBIOS name
     - `Send Boardcast Datagram` Send a datagram to all NetBIOS names on the network
     - `Receive Datagram` Wait for a packet to arrive from a Send Datagram
     - `Receive Boardcase Datagram` Wait for a packet to arrive from a Send Boardcast Datagram
-- Session service (NetBIOS-SSN)
-  - Connection-Oriented
-  - Allow messages to span multiple packets and provide error detection and recovery
-  - In NBT use TCP port **139**
+- NetBIOS-SSN
+  - **NetBIOS Session service** is a connection-oriented and allow messages to span multiple packets and provide error detection and recovery
+  - Using TCP port **139**
   - Function:
     - `Call` Opens a session to a remote NetBIOS name
     - `Listen` Listens for attempts to open a session to a NetBIOS name
@@ -68,8 +66,6 @@
   - `1C` Domain controller for a domain (group record with up to 25 IP)
   - `1E` Browser Service Elections
 
----
-
 # NetBIOS Frames - (NBF)
 
 - Used MS networking in 1990s
@@ -81,8 +77,6 @@
 - IEEE 802.2 LLC mode 2 provides the NetBIOS/NetBEUI session service (virtual circuit)
 - Less configure than TCP/IP
 - NetBIOS/NetBEUI services must be implemented atop other protocols (IPX, TCP/IP)
-
----
 
 # Internetwork Packet Exchange/Sequenced Packet Exchange (IPX/SPX)
 
@@ -96,9 +90,32 @@
   - Used by client-server app
   - Used `NAKs` for confirm acknowledgement like TCP `ACK`
 
----
-
 # NetBIOS over TCP/IP (NBT, NetBT)
 
 - Networking protocol allows legacy computer app on the NetBIOS API to used on modern TCP/IP
 
+## Command
+
+Diagnostic tool for NetBIOS over TCP/IP
+```
+nbtstat
+```
+- Help troubleshoot NetBIOS name solution problems
+- Included in serveral versions of MS
+- Allow to
+  - Local cache lookup
+  - WINS server query
+  - Boardcast
+  - LMHOSTS lookup
+  - Hosts lookup
+- Options
+  - `nbtstat -a <Remote name>` Performs a NetBIOS adapter status on computer name
+    - Returns the local NetBIOS name table for that computer and MAC address of the adapter card
+  - `nbtstat -A <IP>` Performs the same function using a target IP
+  - `-c` Displays the contents of the NetBIOS name cache, the table of NetBIOS name and resolved IP
+  - `-n` Displays the names registered on the system
+  - `-r` Displays the count of all NetBIOS names resolved by boardcast and querying a WINS server
+  - `-R` Purge and reload the remote cache name table
+  - `-RR` Sends name release packets to WINS and then Refresh
+  - `-s` Lists the current NetBIOS sessions and status, including statistics
+  - `-S` Lists sessions table with desc IP
