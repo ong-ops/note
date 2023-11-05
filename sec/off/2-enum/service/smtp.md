@@ -24,7 +24,11 @@ https://computer.howstuffworks.com/e-mail-messaging/email3.htm
 
 ### Server Details
 
-- Use the `smtp_version` module in Metasploit to scan a range of IP and determine the version of any mail servers
+Use the `auxiliary/scanner/smtp/smtp_version` module in Metasploit to scan a range of IP and determine the version of any mail servers
+```
+msfconsole
+use smtp_version
+```
 
 ### Users from SMTP
 
@@ -32,8 +36,12 @@ https://computer.howstuffworks.com/e-mail-messaging/email3.htm
   - VRFY (Confirming the names of valid users)
   - EXPN (Reveals the actual address of user's aliases and lists of e-mail)
 - We can do this manually over a `telnet`
-- Use the `smtp_enum` module in Metasploit
+- Use the `auxiliary/scanner/smtp/smtp_enum` module in Metasploit
   - Set a host or range of hosts to scan and a wordlist containing usernames to enumerate
+```
+msfconsole
+use smtp_enum
+```
 
 ### Alternative
 
