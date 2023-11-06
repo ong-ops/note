@@ -23,6 +23,10 @@
   - Network
     - https://tryhackme.com/room/wireshark
     - https://tryhackme.com/room/wifihacking101
+  - Burpsuite
+    - https://tryhackme.com/room/burpsuiterepeater
+    - https://tryhackme.com/room/burpsuiteintruder
+    - https://tryhackme.com/room/burpsuiteom (Decoder, Comparer, Sequencer)
 
 ### Reading List
 
