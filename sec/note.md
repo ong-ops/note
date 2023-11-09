@@ -27,6 +27,8 @@
     - https://tryhackme.com/room/burpsuiterepeater
     - https://tryhackme.com/room/burpsuiteintruder
     - https://tryhackme.com/room/burpsuiteom (Decoder, Comparer, Sequencer)
+  - Dev
+    - https://tryhackme.com/room/securesdlc
 
 ### Reading List
 

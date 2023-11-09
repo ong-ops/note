@@ -36,29 +36,28 @@
 
 #### Cracking the password
 
-```
-sqlite> SELECT * FROM customers;
-0|Joy Paulson|4916 9012 2231 7905|5f4dcc3b5aa765d61d8327deb882cf99
-1|John Walters|4671 5376 3366 8125|fef08f333cc53594c8097eba1f35726a
-2|Lena Abdul|4353 4722 6349 6685|b55ab2470f160c331a99b8d8a1946b19
-3|Andrew Miller|4059 8824 0198 5596|bc7b657bd56e4386e3397ca86e378f70
-4|Keith Wayman|4972 1604 3381 8885|12e7a36c0710571b3d827992f4cfe679
-5|Annett Scholz|5400 1617 6508 1166|e2795fc96af3f4d6288906a90a52a47f
-```
-- Use the online tool: https://crackstation.net/
-
+- Use the online tool: https://crackstation.net/ for weak hashed
 
 ## 3. Injection
 
-
+- SQL Injection
+- Command Injection
+  - Execute inline command `$(your_command_here)`
 
 ## 4. Insecure Design
 
-
+- Insecure Password Resets
+  - Rate limit only 1 ip
+  - Predicable Question like colour
 
 ## 5. Security Misconfiguration
 
-
+- Poorly configured permission on cloud services (S3 bucket)
+- Having unnecessary features enabled (services, pages, accounts or privileges)
+- Default accounts with unchanged password
+- Error messages that are overly detailed and allow attackers to find out more about the system.
+- Not using HTTPs
+- Debugging features in production software
 
 ## 6. Vulnerable and Outdated Components
 
