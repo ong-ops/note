@@ -61,14 +61,19 @@
 
 ## 6. Vulnerable and Outdated Components
 
-
-
 ## 7. Identification and Authentication Failures
 
-
+- Common flaws in Authentication
+  - Brute force attacks
+  - Use of weak credentials
+  - Weak Session Cookies
+  - Add a space at first when register existing username
+- Mitigation
+  - To avoid password-guessing attacks
+  - To avoid brute force attacks
+  - Implement MFA
 
 ## 8. Software and Data Integrity Failures
-
 
 
 ## 9. Security Logging & Monitoring Failures
