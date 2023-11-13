@@ -75,6 +75,27 @@
 
 ## 8. Software and Data Integrity Failures
 
+- Checksum (MD5, SHA1, SHA256)
+  - md5sum
+  - sha1sum
+  - sha256sum
+- 2 Type vulnerabilities
+  - **Software Integrity Failure**
+    - No check against the 3rd party lib/software
+    - Use the `Subresource Integrity (SRI)` to specify a hash along the lib URL so that the lib code is executed only if the hash downloaded file matches the expected value (https://www.srihash.org/)
+    - The correct way to insert lib in HTML code
+    ```html
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    ```
+  - **Data Integrity Failure**
+    - Cookie
+    - https://appdevtools.com/base64-encoder-decoder
+    - Use `JWT` to prevent alter Cookie by a user
+      - `JWT` and the `None` Algorithm
+        - Attacker can bypass the signature validatino by changing 2 things in JWT
+          1. Modify the header section `alg` contain the value `none`
+          2. Remove the signature part
+          3. Remain last dot
 
 ## 9. Security Logging & Monitoring Failures
 
