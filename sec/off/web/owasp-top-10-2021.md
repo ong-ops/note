@@ -99,7 +99,22 @@
 
 ## 9. Security Logging & Monitoring Failures
 
-
+- Impact
+  - Regulatory damage
+  - Risk of further attack
+    - undetected without logging
+- Info stored in logs should include
+  - HTTP status codes
+  - Time Stamps
+  - Usernames
+  - API endpoints/page locations
+  - IP addresses
+- Suspicious Activity
+  - Multiple unauthorised attempts for a particular action
+  - Requests from anomalous IP addresses or locations
+  - Use of automated tools
+  - Common payloads
+- Need to be rated to the impact level
 
 ## 10. Server-Side Request Forgery (SSRF)
 
