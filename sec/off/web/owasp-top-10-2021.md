@@ -118,5 +118,8 @@
 
 ## 10. Server-Side Request Forgery (SSRF)
 
+- Enumerate internal networks, including IP and ports
+- Abuse trust relationships between servers and gain access to otherwise restricted services
+- Interact with some non-HTTP services to get RCE
 
 
