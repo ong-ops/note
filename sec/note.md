@@ -2,8 +2,6 @@
 
 ### THM Room
 
-  - https://tryhackme.com/room/bashscripting
-  - Regex - https://tryhackme.com/room/catregex
   - https://tryhackme.com/room/adventofcyber2  
   - Windows  
     - Core Windows Processes - https://tryhackme.com/room/btwindowsinternals
@@ -29,6 +27,12 @@
     - https://tryhackme.com/room/burpsuiteom (Decoder, Comparer, Sequencer)
   - Dev
     - https://tryhackme.com/room/securesdlc
+  - Web
+    - https://tryhackme.com/room/webenumerationv2
+  - Terminal
+    - https://tryhackme.com/room/introtoshells
+    - https://tryhackme.com/room/bashscripting
+    - Regex - https://tryhackme.com/room/catregex
 
 ### Reading List
 
