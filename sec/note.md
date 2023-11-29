@@ -19,7 +19,7 @@
   - Exploitation
     - https://tryhackme.com/module/metasploit
   - Network
-    - https://tryhackme.com/room/wireshark
+    - https://tryhackme.com/room/overpass2hacked
     - https://tryhackme.com/room/wifihacking101
   - Burpsuite
     - https://tryhackme.com/room/burpsuiterepeater
