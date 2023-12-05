@@ -1,5 +1,28 @@
 # Upload Vulnerabilities
 
+## Methodology
+
+1. Verify server language or framework
+2. Scan upload page, look client script code
+3. Upload innocent file, see result (use `gobuster -x` to scan extension)
+4. Find where uploaded file can be accessed
+
+## Check server-side filtering
+
+1. Check invalid file extension (e.g. testingimage.invalidfileextension)
+  - can uploaded -> blacklist
+  - cannot -> whitelist
+2. Upload innocent file but change magic number
+  - if fail -> server filters magic number
+3. Upload innocent file but use burpsuite to intercept and change `MIME` type
+  - if fail -> server filters MIME types
+4. Enumerate file length filter
+  - small -> big file
+
+## Tool
+
+- hexeditor -> specific file signature
+
 ## Attacking
 
 - Overwriting existing files on a server
